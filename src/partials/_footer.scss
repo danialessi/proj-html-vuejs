@@ -1,0 +1,121 @@
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-logo {
+        width: calc(100% / 4);
+        padding-right: 43px;
+
+        img {
+            width: 60%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .footer-title {
+        h3 {
+            text-transform: uppercase;
+        }
+    }
+
+    .green-borders {
+        margin: 0 0 20px 0;
+    }
+
+    // links 
+    .quick-links {
+        width: calc(100% / 4);
+
+        .footer-list {
+            text-align: center;
+
+            a {
+                color: $grey_font_color;
+                text-decoration: none;
+            }
+        }
+    }
+    // end links
+
+    // contact
+    .contact {
+        padding-right: 95px;
+
+        p {
+            padding-bottom: 26px;
+        }
+    }
+    // end contact
+
+    .map {
+        padding-top: 40px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// copyright
+.copyright-container {
+    width: 100%;
+    background-color: #3d3d3d;
+    position: relative;
+
+    .copyright-inner {
+        @include flexed_between;
+        padding: 30px 0;
+
+        p {
+            text-transform: uppercase;
+            font-size: 10px;
+        }
+
+        .socials {
+            a {
+                color: $grey_font_color;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .bottom-page-buttons {
+        position: absolute;
+        right: 82px;
+        top: 7px;
+        @include flexed_between;
+
+        .back-to-top {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 0;
+            cursor: pointer;
+
+            i {
+                font-size: 11px;
+            }
+        }
+
+        .chat {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #527ceb;
+            position: relative;
+            margin-left: 15px;
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 25px;
+            }
+        }
+    }
+
+}
+// end copyright

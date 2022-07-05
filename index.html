@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhloxBusiness</title>
+
+    <!-- vueJS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.1/vue.min.js" integrity="sha512-ilCG6fVrVUku43QV/xZ0E8ur1WowVjKCXhc4y4KkQWEdU++VVm+llPwQBul3PMn84PlyXuSg070GqDf0X11Vyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- font "poppins"  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+    <!-- css  -->
+    <link rel="stylesheet" href="dist/app.css">
+</head>
+<body>
+    
+    <div id="root">
+        <!-- HEADER  -->
+        <header>
+            <!-- TOP CONTACTS section  -->
+            <div class="top-contacts-container">
+                <div class="container">
+                    
+                    <div class="top-contacts-inner white-fonts p-size">
+                        
+                        <div class="phone-numbers">
+                            <span><i class="fas fa-phone-alt"></i></span>
+                            <span>(001) 88451234</span>
+                            <span>88455438</span>
+                        </div>
+
+                        <div class="socials">
+                            <a
+                            v-for="element in socials"
+                            :href="element.link"
+                            v-html="element.icon">
+                        </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- end TOP CONTACTS section  -->
+
+            <!-- NAVBAR section  -->
+            <div class="container">
+               <div class="navbar-section-inner">
+
+                <div class="logo-container">
+                    <img src="img/cropped-Group-39-2x.png" alt="logo">
+                </div>
+
+                <!-- navbar  -->
+                <nav>
+                    <ul class="navbar-list">
+                        <li v-for="element in navbarArray"><a :href="element.link">{{ element.name }}</a></li>
+                    </ul>
+                </nav>
+                <!-- end navbar  -->
+
+                <!-- purchase  -->
+                <div class="purchase">
+                    <button class="green-button">Purchase</button>
+                    <span><i class="fas fa-search"></i></span>
+                </div>
+                <!-- end purchase  -->
+               </div>
+            </div>
+            <!-- end NAVBAR section  -->
+        </header>
+        <!-- END HEADER  -->
+
+        <!-- MAIN  -->
+        <main>
+
+            <!-- jumbotron  -->
+            <section class="jumbotron grey-section">
+                <div class="container-2">
+                    
+                    <div class="jumbotron-inner">
+                        
+                        <!-- j-col-left  -->
+                        <div class="j-col-left">
+                            
+                            <div class="title-container">
+                                <h4>17 years of experience</h4>
+                                <h1>Focus on Your</h1>
+                                <span><strong>Business</strong></span>
+                            </div>
+                            
+                            <div class="green-borders">
+                                <div class="dot-green-border"></div>
+                                <div class="line-green-border"></div>
+                            </div>
+                            
+                            <div class="j-paragraph">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                                    there live the blind tests. Separated they live in Bookmarksgrove right at the coast of the 
+                                    Semantics, a large language ocean. Separated they live in Bookmarksgrove.
+                                </p>
+                            </div>
+
+                            <button class="black-button">Read more</button>
+
+                            <!-- social list  -->
+                            <ul class="socials-list inline-list">
+                                <li>Facebook - </li>
+                                <li>Instagram - </li>
+                                <li>Youtube - </li>
+                                <li>Twitter</li>
+                            </ul>
+                            <!-- end social list  -->
+
+                            <div class="black-button slider">
+                                <ul class="inline-list">
+                                    <li>01</li>
+                                    <li>02</li>
+                                    <li>03</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end j-col-left  -->
+                    </div>
+                </div>
+            </section>
+            <!-- end jumbotron  -->
+
+            <!-- goals  -->
+            <section class="section-padding">
+                <div class="container">
+                    
+                    <div class="goals-section-inner">
+                        
+                        <!-- goals-col-left  -->
+                        <div class="goals-col-left">
+                            <div class="section-title">
+                                <h2>We Are Here To Make Your <span>Website</span> Look More <span>Elegant</span> And Stylish!</h2>
+    
+                                <div class="green-borders">
+                                    <div class="dot-green-border"></div>
+                                    <div class="line-green-border"></div>
+                                </div>
+
+                                <button class="green-button">View all</button>
+                            </div>
+                        </div>
+                        <!-- end goals-col-left -->
+
+                        <!-- goals-col-right  -->
+                        <div class="goals-col-right">
+                            <div class="tile">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h3>Speed optimization</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
+                            </div>
+
+                            <div class="tile">
+                                <i class="fas fa-cloud"></i>
+                                <h3>Cloud Solutions</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
+                            </div>
+                            
+                            <div class="tile">
+                                <i class="fas fa-tablet"></i>
+                                <h3>Website Design</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
+                            </div>
+
+                            <div class="tile">
+                                <i class="fas fa-stopwatch"></i>
+                                <h3>Online Marketing</h3>
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia Separated...</p>
+                            </div>
+
+                            <div class="vertical-text">
+                                <p>17 years of experience helping people for best solutions</p>
+                            </div>
+                        </div>
+                        <!-- end goals-col-right  -->
+
+                    </div>
+                </div>
+                
+                
+            </section>
+            <!-- end goals  -->
+
+            <!-- missions  -->
+            <section class="missions-section grey-section">
+                <div class="missions-inner">
+                    
+                    <div class="left-images">
+                        
+                        <div class="image-container">
+                            <img src="img/busy-architect-PYVKWM4-1024x872.jpg" alt="architect">
+                            <div class="layover"></div>
+                        </div>
+
+                        <div class="woman-img-container">
+                            <img src="img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="woman">
+                        </div>
+
+                    </div>
+
+
+                    <div class="missions-col-right">
+                        <div class="section-title">
+                            <h2>learn more about our <span>missions</span></h2>
+
+                            <div class="green-borders">
+                                <div class="dot-green-border"></div>
+                                <div class="line-green-border"></div>
+                            </div>
+
+                            <div class="paragraph">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                                    there live the blind tests. Separated they live in Bookmarksgrove right at the coast of the 
+                                    Semantics, a large language ocean. Separated they live in Bookmarksgrove.
+                                </p>
+                            </div>
+
+                            <button class="green-button">Read more</button>
+                        </div>    
+                    </div>
+                </div>
+            </section>
+            <!-- end missions  -->
+
+            <!-- examples  -->
+            <section class="section-padding">
+                <div class="container">
+                    <div class="examples-inner">
+                    
+                        <!-- top-row  -->
+                        <div class="top-row">
+                            
+                            <div class="top-row-col-left">
+                                <div class="green-borders">
+                                    <div class="dot-green-border"></div>
+                                    <div class="line-green-border"></div>
+                                </div>
+    
+                                <div class="section-title examples-title">
+                                    <h2>Our recent <span>web designs </span>& some examples of past <span>projects</span></h2>
+                                </div>
+
+                                <div class="green-borders">
+                                    <div class="dot-green-border"></div>
+                                    <div class="line-green-border"></div>
+                                </div>
+                            </div>
+
+                            <div class="top-row-col-right">
+                                <div class="paragraph">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                                        there live the blind tests. Separated they live in Bookmarksgrove right at the coast of the 
+                                        Semantics, a large language ocean. Separated they live in Bookmarksgrove. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                                        there live the blind tests. Separated they live in Bookmarksgrove.
+                                    </p>
+                                </div>
+                            </div>
+                            
+    
+    
+                        </div>
+                        <!-- end top-row  -->
+    
+                        <!-- bottom-row -->
+                        <div class="bottom-row">
+                            
+                            <div class="single-image">
+                                <img src="img/ina-soulis-227104-unsplash-1024x1024.jpg" alt="flower">
+                                <div class="layover"></div>
+                            </div>
+                            
+                            <div class="single-image">
+                                <img src="img/sunisa-misa-531163-unsplash-1024x1024.jpg" alt="wheel">
+                                <div class="layover">
+                                    <div class="layover-text">
+                                        <h4>A Famous Ferries Wheel</h4>
+                                        <h5>MARKETING</h5>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="single-image">
+                                <img src="img/355H-1024x1024.jpg" alt="shoes">
+                                <div class="layover"></div>
+                            </div>
+
+                            <div class="single-image">
+                                <img src="img/photo-1448932252197-d19750584e56-1024x1024.jpg" alt="hands">
+                                <div class="layover"></div>
+                            </div>
+
+                            <div class="single-image">
+                                <img src="img/business-competition-PB366D8-1024x1024.jpg" alt="paper-boats">
+                                <div class="layover"></div>
+                            </div>
+
+                            <div class="single-image">
+                                <img src="img/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg" alt="sofa">
+                                <div class="layover"></div>
+                            </div>
+
+                            <div class="single-image">
+                                <img src="img/aa9a4539-PQGJ7HU-1024x1024.jpg" alt="balloon">
+                                <div class="layover"></div>
+                            </div>
+
+                            <div class="single-image">
+                                <img src="img/cody-davis-253928-unsplash-1024x1024.jpg" alt="orange">
+                                <div class="layover"></div>
+                            </div>
+
+                            <div class="vertical-text">
+                                <p>17 years of experience helping people for best solutions</p>
+                            </div>
+                        </div>
+                        <!-- end bottom-row -->
+
+                        <button class="green-button">read more</button>
+                    </div>
+                </div>
+            </section>
+            <!-- end examples  -->
+
+            <!-- numbers  -->
+            <section class="grey-section section-padding">
+                <div class="container">
+                    
+                    <div class="top-numbers-row">
+                        
+                        <div class="image-container">
+                            <img src="img/person-with-long-curly-hair-PZ99QM2-2x.jpg" alt="person-hair">
+                            <div class="layover">
+                                <div class="layover-inner-text">
+                                    
+                                    <div class="top-numbers">
+                                        <h2>280</h2>
+                                        <h3>PROJECTS</h3>
+                                    </div>
+                                    
+                                    <div class="bottom-numbers">
+                                        <span>+3,500
+                                            <h3>USERS' COMMENT</h3>
+                                        </span>
+
+                                        <span>100%
+                                            <h3>HAPPY CLIENTS</h3>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="title-container">
+                            <div class="section-title">
+                                <h2>We <span>Love </span>What We Do</h2>
+    
+                                <div class="green-borders">
+                                    <div class="dot-green-border"></div>
+                                    <div class="line-green-border"></div>
+                                </div>
+    
+                                <div class="paragraph">
+                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                                        there live the blind tests. Separated they live in Bookmarksgrove right at the coast of the 
+                                        Semantics, a large language ocean. Separated they live in Bookmarksgrove.
+                                    </p>
+                                </div>
+
+                                <ul class="list-unstyled p-size">
+                                    <li><i class="fas fa-check"></i> far far away, behind the word mountains</li>
+                                    <li><i class="fas fa-check"></i> large language ocean</li>
+                                    <li><i class="fas fa-check"></i> far from the countries Vokalia and Consonantia</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <div class="prices-row">
+                        
+                        <div class="section-title">
+                            <h2>With <span>Live Chat 24/7 </span>Support</h2>
+
+                            <div class="green-borders">
+                                <div class="dot-green-border"></div>
+                                <div class="line-green-border"></div>
+                            </div>
+
+                            <div class="paragraph">
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                                    there live the blind tests. Separated they live in Bookmarksgrove right at the coast of the 
+                                    Semantics.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- prices box  -->
+                        <div class="price-box">
+                            
+                            <div class="title-price-box">
+                                <h3>Designing</h3>
+                                <p>All Designs</p>
+                            </div>
+                            
+                            <div class="price">
+                                <h2><span>$</span> 13 <span>/Design</span></h2>
+                            </div>
+
+                            <ul class="price-box-list list-unstyled p-size">
+                                <li><i class="fas fa-check"></i>Creative Design Enabled</li>
+                                <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
+                                <li><i class="fas fa-check"></i>Eye Catching Design</li>
+                                <li><i class="fas fa-check"></i>Extreme Typography</li>
+                                <li><i class="fas fa-check"></i>Exceptional Design</li>
+                            </ul>
+                        </div>
+
+                        <!-- middle price box  -->
+                        <div class="price-box">
+                            <div class="top-green-border"></div>
+                            
+                            <div class="title-price-box">
+                                <h3>Development</h3>
+                                <p>Wordpress Projects</p>
+                            </div>
+                            
+                            <div class="price green-box">
+                                <h2><span>$</span> 15 <span>/Project</span></h2>
+                            </div>
+
+                            <ul class="price-box-list list-unstyled p-size">
+                                <li><i class="fas fa-check"></i>Creative Design Enabled</li>
+                                <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
+                                <li><i class="fas fa-check"></i>Eye Catching Design</li>
+                                <li><i class="fas fa-check"></i>Extreme Typography</li>
+                                <li><i class="fas fa-check"></i>Exceptional Design</li>
+                            </ul>
+                        </div>
+                        <!-- end middle price box  -->
+
+                        <div class="price-box">
+                            
+                            <div class="title-price-box">
+                                <h3>SEO</h3>
+                                <p>Web Products</p>
+                            </div>
+                            
+                            <div class="price">
+                                <h2><span>$</span> 10 <span>/Product</span></h2>
+                            </div>
+
+                            <ul class="price-box-list list-unstyled p-size">
+                                <li><i class="fas fa-check"></i>Creative Design Enabled</li>
+                                <li><i class="fas fa-check"></i>Vibrant Color Usage</li>
+                                <li><i class="fas fa-check"></i>Eye Catching Design</li>
+                                <li><i class="fas fa-check"></i>Extreme Typography</li>
+                                <li><i class="fas fa-check"></i>Exceptional Design</li>
+                            </ul>
+                        </div>
+                        <!-- end prices box  -->
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- end numbers  -->
+
+            <!-- quote  -->
+            <section class="quote-section">
+                <div class="black-layover">
+                    <i class="fas fa-quote-left"></i>
+                    
+                    <div class="quote">
+                        <p><em>When it comes to barbequing, there are two main schools of thought for the techniques that you can use. Freshly scrambled eggs with applewood smoked bacon <br>
+                             - are amazing!</em></p>
+                    </div>
+                    
+                    <div class="client-img">
+                        <img src="img/businesswoman-analysing-document-P8WSNMC-1024x820.jpg" alt="business-woman">
+                        <p class="client-name">LISSA DURBIN</p>
+                        <p>Client</p>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- end quote  -->
+
+            <!-- news-blog  -->
+            <section class="news-blog-section section-padding">
+                <div class="container">
+                    
+                    <!-- title  -->
+                    <div class="section-title">
+                        <h2>Latest News & Our <span>Blog</span></h2>
+                    </div>
+
+                    <div class="green-borders">
+                        <div class="dot-green-border"></div>
+                        <div class="line-green-border"></div>
+                    </div>
+                    <!-- end title  -->
+
+                    <div class="posts-container">
+                        
+                        <!-- single-post  -->
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg" alt="serious-business-woman">
+                            </div>
+
+                            <div class="post-text">
+                                <p>May 24, 2018 by Alex</p>
+                                <h4><i class="fas fa-circle"></i> Marketing Ideas</h4>
+                            </div>
+                        </div>
+                        <!-- end single-post  -->
+
+                        <!-- single-post  -->
+                         <div class="post">
+                            <div class="post-image">
+                                <img src="img/Businessman-at-the-desk-in-his-office-resting--1024x768.jpg">
+                            </div>
+
+                            <div class="post-text">
+                                <p>May 24, 2018 by Alex</p>
+                                <h4><i class="fas fa-circle"></i> Rest During Working Hours</h4>
+                            </div>
+                        </div>
+                        <!-- end single-post  -->
+
+                        <!-- single-post  -->
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="img/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg">
+                            </div>
+
+                            <div class="post-text">
+                                <p>May 24, 2018 by Alex</p>
+                                <h4><i class="fas fa-circle"></i> Develop Your Startup Idea</h4>
+                            </div>
+                        </div>
+                        <!-- end single-post  -->
+
+                        <div class="vertical-text">
+                            <p>17 years of experience helping people for best solutions</p>
+                        </div>
+                    </div>
+
+                    <button class="black-button">View all post</button>
+                </div>
+            </section>
+            <!-- end news-blog  -->
+
+            <!-- start  -->
+            <section class="start-section section-padding">
+                
+                <div class="container">
+                    <div class="start-inner">
+                    
+                        <!-- cards  -->
+                        <div class="start-card">
+                            <p>Are You Ready?</p>
+                            <h3>Start a New Project</h3>
+
+                            <div class="email-input">
+                                <input type="email" placeholder="Enter Your Email Address">
+                                <span><button type="submit">SUBMIT</button></span>
+                            </div>
+                            
+                        </div>
+
+                        <div class="start-card green-card">
+                            <p>What Are You Waiting For?</p>
+                            <h3>Let's Talk About Work</h3>
+
+                            <button class="black-button">start now</button>
+                            
+                        </div>
+                        <!-- end cards  -->
+
+                    </div>
+
+                    <!-- companies  -->
+                    
+                    <!-- end companies  -->
+                </div>
+               
+            </section>
+            <!-- end start  -->
+
+            <!-- companies  -->
+            <section class="grey-section section-padding">
+
+                <div class="container">
+                    <div class="companies">
+                        <div class="company">
+                            <img src="img/client-1-2x.png" alt="avantgarde">
+                        </div>
+    
+                        <div class="company">
+                            <img src="img/client-9-2x.png" alt="fastlane">
+                        </div>
+    
+                        <div class="company">
+                            <img src="img/client-7-2x.png" alt="ronjones">
+                        </div>
+    
+                        <div class="company">
+                            <img src="img/client-3-2x.png" alt="chippy's">
+                        </div>
+    
+                        <div class="company">
+                            <img src="img/client-4-2x.png" alt="bullseye">
+                        </div>
+    
+                        <div class="company">
+                            <img src="img/client-5-2x.png" alt="mighty">
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <!-- end companies  -->
+
+        </main>
+        <!-- END MAIN  -->
+
+        <!-- FOOTER  -->
+        <footer class="section-padding">
+            <div class="container">
+                
+                <div class="footer-inner">
+                    
+                    <div class="footer-logo">
+                        <img :src="footer_logo.image_path" alt="logo">
+                        <p>{{footer_logo.paragraph}}</p>
+                    </div>
+
+                    <!-- links  -->
+                    <div class="quick-links">
+                        
+                        <div class="footer-title">
+                            <h3>Quick links</h3>
+                        </div>
+                        
+                        <div class="green-borders">
+                            <div class="dot-green-border"></div>
+                            <div class="line-green-border"></div>
+                        </div>
+
+                        <ul class="footer-list list-unstyled">
+                            <li v-for="element in quick_links"><a :href="element.link" class="p-size">{{element.name}}</a></li>
+                        </ul>
+                    </div>
+                    <!-- end links  -->
+
+                    <!-- contact  -->
+                    <div class="contact">
+                        <div class="footer-title">
+                            <h3>Contact</h3>
+                        </div>
+                        
+                        <div class="green-borders">
+                            <div class="dot-green-border"></div>
+                            <div class="line-green-border"></div>
+                        </div>
+
+                        <p>{{contact.name_address}}</p>
+                        <p>{{contact.contact_mail}}</p>
+                        <p>{{contact.phone}}</p>
+                    </div>
+                    <!-- end contact  -->
+
+                    <!-- map  -->
+                    <div class="map">
+                        <div class="footer-title">
+                            <h3>Location on map</h3>
+                        </div>
+                        
+                        <div class="green-borders">
+                            <div class="dot-green-border"></div>
+                            <div class="line-green-border"></div>
+                        </div>
+
+                        <div class="map-img">
+                            <img :src="map.image" alt="map">
+                        </div>
+                    </div>
+                    <!-- end map  -->
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- copyright  -->
+        <div class="copyright-container">
+            <div class="container">
+                
+                <div class="copyright-inner">
+                    
+                    <p>© 2020 phlox business theme.</p>
+                    
+                    <div class="socials">
+                        <a
+                            v-for="element in socials"
+                            :href="element.link"
+                            v-html="element.icon">
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- buttons  -->
+            <div class="bottom-page-buttons">
+                <button @click="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+                <div class="chat"><i class="far fa-comment"></i></div>
+            </div>
+            <!-- end buttons  -->
+        </div>
+        <!-- end copyright  -->
+        <!-- END FOOTER  -->
+    </div>
+
+    <!-- Javascript -->
+    <script src="dist/app.js"></script>
+</body>
+</html>

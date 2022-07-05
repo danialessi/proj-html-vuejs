@@ -1,0 +1,35 @@
+@mixin flexed_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin btn {
+    padding: 12px 30px;
+    border-radius: 20px;
+    color: $white_font_color;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+@mixin green_border {
+    height: 5px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+@mixin bg_gradient {
+    background: rgb(39,219,148);
+    background: linear-gradient(90deg, rgba(39,219,148,1) 45%, rgba(133,224,105,1) 100%);
+}
+
+@mixin bg_gradient_alpha {
+    background: rgb(39,219,148);
+    background: linear-gradient(90deg, rgba(39,219,148,0.8603816526610644) 45%, rgba(133,224,105,1) 100%);
+}
+
+@mixin button_gradient {
+    background: rgb(39,219,148);
+    background: linear-gradient(270deg, rgba(39,219,148,1) 50%, rgba(133,224,105,1) 100%);
+}
